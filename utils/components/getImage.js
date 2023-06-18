@@ -1,6 +1,7 @@
 const { MessageMedia } = require("whatsapp-web.js");
 
-const getImage = async (msg, client) => {
+const getImage = async (msg, client, url) => {
+    msg.reply('sabar.....');
     const req = await fetch('https://wibu-api.eu.org/api/anime/nsfw/waifu');
     const res = await req.json();
 

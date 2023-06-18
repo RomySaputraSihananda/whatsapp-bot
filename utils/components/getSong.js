@@ -24,6 +24,7 @@ const downloadAudio = async (url, title) => {
 }
 
 const getSong = async (msg, client, url) => {
+    msg.reply('sabar.....');
     try {
         const title = await getTitle(url);
         await downloadAudio(url, title);
