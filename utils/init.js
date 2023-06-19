@@ -6,6 +6,7 @@ const help = require('./components/help');
 const ipCalc = require('./components/ipCalc');
 const gachaWife = require('./components/gachaWife');
 const getMediaIG = require('./components/getMediaIG');
+const scan = require('./components/scan');
 
 module.exports = {
     createSticker,
@@ -15,5 +16,6 @@ module.exports = {
     help,
     ipCalc,
     gachaWife,
-    getMediaIG
+    getMediaIG,
+    scan
 }

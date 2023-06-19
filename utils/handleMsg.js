@@ -1,4 +1,4 @@
-const { createSticker, getImage, getSong, getName, help, ipCalc, gachaWife, getMediaIG } = require('./init');
+const { createSticker, getImage, getSong, getName, help, ipCalc, gachaWife, getMediaIG, scan } = require('./init');
 
 const handleMsg = (msg, client) => {
     const from = {
@@ -31,6 +31,9 @@ const handleMsg = (msg, client) => {
         } else if ((msg.body.startsWith('.getIG'))) {
             const url = msg.body.split('-')[1];
             return getMediaIG(msg, client, url);
+        } else if ((msg.body.startsWith('.scan'))) {
+            const url = msg.body.split('-')[1].split('/')[2];
+            return scan(msg, url);
         }
     } else if ((from.message === 'assalamualaikum') || (from.message === "assalamu'alaikum")) {
         return msg.reply("Waalaikum'salam");
